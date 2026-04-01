@@ -1,8 +1,9 @@
-*, *::after, *::before{
+/* *, *::after, *::before{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
+} */
+@import "reset.css" layer(reset);
 
 :root{
     --teal: #087f8c;
@@ -27,13 +28,12 @@ html{
 
 h1{
     font-size: 5rem;
-    margin-block-end: 2rem;
     color: #fff;
-    height: 400px;
+    height: 30rem;
     display: grid;
     place-content: center;
     text-align: center;
-    text-shadow: rgba(0,0,0,0.5) 5px 5px 3px;
+    text-shadow: rgb(0 0 0 / .7) 5px 5px 3px;
 }
 
 
@@ -42,9 +42,9 @@ h1{
 header{
     display: flex;
     justify-content: space-between;
-    font-size: 17px;
+    font-size: 1.1rem;
     font-weight: bold;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgb(0 0 0/ .6);
     position: fixed;
     inset:0 0 auto 0; /* top right bottom left */
     max-inline-size: 1000px;
@@ -55,19 +55,18 @@ header{
 header p{
     font-size: 2rem;
     color: white;
-    padding: 5px;
+    padding: 0.2em;
 }
 
 .primary-navigation{
     display: flex;
-    margin-inline-end: 1rem;
+    margin-inline-end: 1em;
 }
 
 
 .primary-navigation ul{
     display: flex;
-    gap: 1rem;
-    height: 100%;
+    gap: 1em;
 }
 
 .primary-navigation li{
@@ -95,23 +94,21 @@ header p{
 .primary-navigation a{
     color: white;
     text-decoration: none;
-    height: 100%;
+    block-size: stretch;
     display: grid;
     place-content: center;
 }
 
 /* about section */
 .about-h1{
-    background: url(./images/h1-bg.jpg);
-    background-position: center;
-    background-size: cover;
+    background: url(./images/h1-bg.jpg) center/cover;
 }
 
 h2{
     font-size: 3rem;
-    padding: 1rem;
+    padding: 0.5em;
     text-align: center;
-    margin-block: 2rem;
+    margin-block: 1em;
     color: var(--teal);
     background-color: var(--lightgreen);
 }
@@ -120,13 +117,13 @@ h2{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    place-content: center;
+    place-items: center;
+
 }
 
 .grid-section img{
     inline-size: 100%;
     display: block;
-    margin-inline: auto;
 }
 .grid-section p{
     padding: 3rem;
@@ -136,24 +133,19 @@ h2{
 /* landmark-section */
 
 .landmark-h1{
-    background: url(./images/castle-pic.jpg);
-    background-position: center;
-    background-size: cover;
+    background: url(./images/castle-pic.jpg) center/cover;
 }
 
 h3{
     font-size: 2rem;
     text-align: center;
     color: var(--teal);
-    margin-block-start: 2rem;
 }
 
 /* cuisine section */
 
 .cuisine-h1{
-    background: url(./images/lebanese-cuisine.jpg);
-    background-position: center;
-    background-size: cover;
+    background: url(./images/lebanese-cuisine.jpg) center/cover;
 }
 
 .cuisine{
@@ -161,14 +153,14 @@ h3{
 }
 
 .cuisine p{
-    padding: 1rem;
+    padding: 1em;
 }
 
 /* Religion section */
 
 .color-wheel{
-    width: 200px;
-    height: 200px;
+    width: 15rem;
+    height: 15rem;
     border-radius: 50%;
     background: conic-gradient( 
         #FF6B6B 0turn 0.322turn ,
@@ -181,22 +173,20 @@ h3{
 }
 
 .h1-religion{
-    background: url(./images/h1-religion-bg.webp);
-    background-position: center;
-    background-size: cover;
+    background: url(./images/h1-religion-bg.webp) center/cover;
 }
 
 .main-p{
     padding: 3rem;
-    margin-block: 1rem;
+    margin-block: 1em;
     font-size: 18px;
     background-color: var(--dark);
     color: var(--beige);
 }
 
 .color-wheel-container{
-    padding: 3rem;
-    font-size: 20px;
+    padding: 3em;
+    font-size: 1.2rem;
 }
 
 .color-wheel{
@@ -208,7 +198,7 @@ h3{
 }
 
 .color-wheel-container li::marker{
-    font-size: 30px;
+    font-size: 2rem;
 }
 
 .color-wheel-container li:nth-child(1)::marker{
@@ -235,34 +225,34 @@ h3{
 
 .table-quote{
     padding: 3rem;
-    margin-block: 2rem;
+    margin-block: 2em;
     background-color: var(--dark);
     color: var(--beige);
-    font-size: 20px;
+    font-size: 1.2rem;
 }
 
 .data-table{
     border: 1px solid black;
     margin-inline: auto;
-    border-collapse: collapse;
 }
 
 .data-table th, .data-table td{
     border: 1px solid black;
-    padding: 0.5rem;
+    padding: 0.5em;
 }
 
 .data-table caption{
     background-color: var(--lightgreen);
     color: var(--teal);
-    padding: 0.7rem;
-    font-size: 22px;
+    padding: 0.7em;
+    font-size: 1.4rem;
     border: 1px solid black;
 }
 
 .religion, .religion-total, .religion-header-info{
     background-color: var(--lightgreen);
     color: var(--teal);
+    font-weight: bolder;
 }
 
 /* footer */
@@ -271,11 +261,12 @@ footer{
     background-color: var(--dark);
     color: var(--beige);
     text-align: center;
-    padding: 1rem;
+    padding: 1em;
+    margin-block-start: 2em;
 }
 
 footer p{
-    margin: 0.4rem;
+    margin: 0.4em;
 }
 
 footer a{
@@ -285,4 +276,52 @@ footer a{
 
 footer a:hover{
     text-decoration: underline;
+}
+
+@media screen and (max-width:600px) {
+    h1{
+        font-size: 3rem;
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+
+    h3{
+        font-size: 1.5rem;
+    }
+
+    .grid-section p{
+        padding: 1em;
+        font-size: 1rem;
+    }
+    .color-wheel{
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .main-p, .table-quote{
+        font-size: 1rem;
+        padding: 1em;
+    }
+    .table-section{
+        grid-template-columns: 1fr;
+    }
+
+    
+}
+
+@media screen and (max-width: 450px){
+    .fix-section-overflow{
+        grid-template-columns: 1fr;
+    }
+
+    .cuisine{
+        gap: 0.5rem;
+        grid-template-columns: 1fr;
+    }
+
+    .color-wheel-section{
+        grid-template-columns: 1fr;
+    }
 }
