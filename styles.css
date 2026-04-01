@@ -324,4 +324,18 @@ footer a:hover{
     .color-wheel-section{
         grid-template-columns: 1fr;
     }
+
+    header{
+        font-size: 0.9rem;
+    }
+
+    .primary-navigation ul{
+        display: flex;
+        gap: 0.4em;
+    }
+
+    header p{
+        font-size: 1.7rem;
+    }
+
 }
